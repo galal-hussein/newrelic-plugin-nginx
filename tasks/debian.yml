@@ -1,0 +1,8 @@
+- name: Add Newrelic's APT Repository
+  apt_repository: repo='deb http://nginx.org/packages/{{ ansible_distribution | lower}}/ {{ ansible_distribution_release }} nginx' state=present
+
+- name: Add Nginx signing key
+  apt_key: url=http://nginx.org/keys/nginx_signing.key state=present
+
+- name: Install Newrelic's PHP Agent
+  apt: name=nginx-nr-agent state=present update_cache=yes

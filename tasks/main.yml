@@ -1,0 +1,12 @@
+---
+- name: Run The Debian Version
+  include: debian.yml
+  when: ansible_os_family == 'Debian'
+
+- name: Run The Redhat Version
+  include: redhat.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: Add Nginx nr configuration file
+  template: src=nginx-nr-agent.ini.j2 dest=/etc/nginx-nr-agent/nginx-nr-agent.ini owner=root group=root mode=0644
+  notify: Restart nginx-nr-agent

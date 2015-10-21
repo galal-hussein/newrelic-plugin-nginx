@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  author: Hussein Galal
+  description: Install and configure official Nginx plugin for newrelic. 
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+  - name: EL
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  categories:
+  - monitoring
+  - system
+  - web
+dependencies: []
+  

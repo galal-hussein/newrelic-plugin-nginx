@@ -1,0 +1,3 @@
+newrelic_license_key: ""
+nginx_status_url: "http://localhost/nginx_status"
+nginx_source_name: "Nginx Server"
